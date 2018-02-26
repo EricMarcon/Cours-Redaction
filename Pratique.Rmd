@@ -1,0 +1,277 @@
+---
+title: "Rédaction d'article : Pratique"
+author: "Eric Marcon"
+date: "10 janvier 2018"
+output:
+  ioslides_presentation:
+    logo: EcoFoG2017.png
+  beamer_presentation:
+    df_print: kable
+    includes:
+      in_header: EcoFoGBeamer.tex
+    keep_tex: yes
+    slide_level: 2
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+# Objectifs
+
+## Motivation
+
+Efficacité :
+
+- Consacrer son temps à la rédaction, pas à la mise en forme ;
+
+- Rester concentré sur le fond, sans être perturbé par la technique.
+
+Portabilité :
+
+- Chaque revue a son format: ne pas perdre de temps à reformater en cas de soumission multiple.
+
+
+## Motivation
+
+Collaboration :
+
+- Travailler efficacement à plusieurs.
+
+Reproductibilité :
+
+- Permettre la vérification des résultats ;
+
+- Automatiser la chaîne de traitement des données pour refaire toutes les analyses si une donnée change.
+
+
+## Solutions
+
+Séparer le fond de la forme :
+
+- Le contenu doit être aussi séparé que possible de sa mise en forme.
+
+Tout automatiser :
+
+- intégrer sous la forme d'un projet les données, les calculs, le texte rédigé et la mise en forme ;
+
+- des données à l'article, en un clic.
+
+
+## Outils de rédaction
+
+- Word :
+
+    - Facile à utiliser ;
+    
+    - Format demandé par beaucoup de revues ;
+    
+    - Ne sépare pas bien fond et forme, ne permet pas l'automatisation des traitements ;
+    
+    - Collaboration en ligne avec Office 365.
+    
+- Google Docs :
+
+    - Similaire à Word, mais pas Word ;
+    
+    - Bibliographie automatisable mais pas avec les outils standard ;
+    
+    - Leader de la collaboration en ligne.
+
+    
+## Outils de rédaction
+
+- LaTeX :
+
+    - Nécessite un apprentissage ;
+    
+    - Bonne séparation du fond et de la forme ;
+    
+    - Automatisation complète possible avec knitR ;
+    
+    - Collaboration en ligne avec Overleaf (mais l'automatisation est perdue).
+
+- Markdown :
+
+    - Très simple à apprendre ;
+    
+    - Excellente séparation du fond et de la forme ;
+    
+    - Automatisation simple, idéal pour la reproductibilité ;
+    
+    - Collaboration plus complexe, avec git.
+    
+    
+
+# Mise en oeuvre
+
+## Utilisation de Markdown
+
+R, Rstudio et knitR.
+
+Package EcoFoG : modèles de présentation, d'article et d'ouvrage.
+
+```{r install, eval=FALSE}
+devtools::install_git("EcoFoG/EcoFoG")
+```
+
+Utilisable pour une thèse...
+
+Voir la [Documentation](http://rmarkdown.rstudio.com/lesson-1.html)
+
+
+## Principe
+
+Un projet R contient tout :
+
+- Modèle de document ;
+
+- Fichiers nécessaire à la mise en forme (styles de texte, de bibliographie, ...) ;
+
+- Données ;
+
+- Code R pour produire les résultats, y compris les figures ;
+
+- Figures additionnelles.
+
+
+Ce n'est pas un package :
+
+- Un package a une organisation formelle inutile pour un article ;
+
+- Un package peut se justifier pour une thèse si les méthodes aboutissent à un package publié.
+
+
+## Création du projet
+
+Utiliser l'assistant _Nouveau Fichier /R Markdown... /A partir d'un modèle / Article EcoFoG_.
+
+Un nouveau dossier est créé. Le transformer en projet R: _Nouveau projet /A partir d'un dossier existant_.
+
+Tricoter pour vérifier le fonctionnement.
+
+Possibilité de tricoter en HTML pour gagner du temps.
+
+
+## Données
+
+Placer les données dans le projet, dans un format lisible par R (typiquement, CSV).
+
+Lire les données dans le préambule de l'article.
+
+
+## Calculs et figures
+
+Placer les calculs dans des bouts de code dans la section Matériels et Méthodes.
+
+Utiliser les options des bouts de code :
+
+- `echo` : affichage du code dans l'article (FALSE pour la publication) ;
+
+- `cache` : pour ne pas répéter les calculs à chaque compilation.
+
+Les figures sont produites directement par le code :
+
+- insérer les bouts de code contenant les commandes `plot` dans la section _Résultats_.
+
+
+## Rédaction
+
+Markdown est un langage très simple.
+Sa documentation est disponible sur le site de RStudio[^1].
+
+[^1]: <http://rmarkdown.rstudio.com/articles.html>
+
+
+Markdown est étendu par Bookdown [^2], qui permet la rédaction de livres et une syntaxe plus efficace pour les articles.
+Ce document est réalisé avec Markdown dans RStudio: knitr traite le code Markdown, le passe à Pandoc pour sa transformaton en Latex, enfin MikteX le compile en PDF.
+
+[^2]: <https://bookdown.org/yihui/bookdown/>
+
+
+## Bibliographie
+
+Utiliser sa bibliographie générale, produite par Mendeley :
+
+- Pas de perte de temps pendant la rédaction ;
+
+- Produire une bibliographie autonome à la fin avec Jabref (_Tools /New Sublibrary based on AUX file_).
+
+
+Ou utiliser directement une bibliographie spécifique, dans un fichier bib autonome.
+
+Voir la [Documentation](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html).
+
+
+## Versionnement
+
+Utiliser _git_, le système majoritaire actuellement.
+
+- Installer le moteur _git_ ;
+
+- RStudio gère directement _git_ ;
+
+- Compléter éventuellement par un gestionnaire de bureau pour les autres projets (par exemple, _Tortoise git_).
+
+Passer le projet sous contrôle de version : _Tools /Version Control /Project Setup..._, sélectionner _Git_.
+
+
+## Versionnement
+
+L'unité de modification est la ligne (pas le fichier) :
+
+- Chaque phrase doit être terminée par un retour à la ligne ;
+
+- les paragraphes sont séparés par un saut de ligne.
+
+Chaque séance de travail se termine par une livraison : _Commit_.
+
+
+## Collaboration
+
+Utiliser Github pour un projet public, BitBucket pour un projet privé :
+
+- Ouvrir un compte sur chaque plate-forme ;
+
+- Créer un dépôt pour le projet sur la  plate-forme appropriée ;
+
+- Donner les droits d'écrire sur le dépôt aux collaborateurs (qui doivent avoir un compte sur la même plate-forme) ;
+
+- Copier l'adresse du dépôt, de la forme (exemple sur GitHub) https://github.com/MonCompte/MonDepot.git.
+
+
+## Collaboration
+
+Publier le projet :
+
+- Ouvrir un Terminal dans RStudio ;
+
+- Exécuter:
+
+```
+git remote add origin 
+    https://github.com/MonCompte/MonDepot.git
+git push -u origin master
+```
+
+Après chaque livraison, pousser les modifications sur GitHub ou BitBucket.
+
+Avant chaque séance de travail, tirer les modification des collaborateurs.
+
+
+## Production
+
+Tricoter l'article au format PDF.
+
+Publier le PDF sur un dépôt de preprint comme Hal.
+
+
+## Publication
+
+Revues fournissant un modèle \LaTeX :
+
+- Utiliser le fichier _.tex_ intermédiaire produit par RMarkdown, copier son contenu dans le modèle fourni.
+
+Revues exigeant un format Word :
+
+- Tricoter au format Word, finaliser le document.

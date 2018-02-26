@@ -1,0 +1,94 @@
+---
+title: 'Rédaction d''article: TP'
+author: "Eric Marcon"
+date: "10 janvier 2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
+
+## Objectif
+
+Ecrire un très court article dont le résultat est la comparaison de la diversité neutre des forêts de BCI et de Paracou. On s'intéresse aux arbres seulement.
+
+### Hypothèse
+
+Paracou est plus divers de BCI.
+
+### Contexte
+
+Les données de BCI sont très utilisées dans les études du fonctionnement de la forêt tropicale. 
+La forêt de BCI est pourtant assez pauvre et a été perturbée.
+D'autres forêts expérimentales similaires sont disponibles, avec une biodiversité plus grande.
+
+### Matériel
+
+L'inventaire de BCI se trouve dans le package _vegan_ :
+
+```{r BCI}
+library("vegan")
+data(BCI)
+# 1 ligne par parcelle, 1 colonne par espèce
+dim(BCI)
+```
+
+L'inventaire de deux hectares de Paracou, parcelles 6 et 18, se trouve dans le package _entropart_ :
+```{r Paracou}
+library("entropart")
+data(Paracou618)
+# Le nombre d'individu par espèce est dans le vecteur $Ns de la MetaCommunity Paracou618.MC
+head(Paracou618.MC$Ns)
+```
+
+### Méthodes
+
+Comparer la diversité des deux forêts de deux manières :
+
+- Comparaison des deux deux profils de diversité asymptotiques ;
+
+- Comparaison des valeurs de diversité à q=0, 1 et 2, raréfiés au même taux de couverture.
+
+Les outils nécessaires sont :
+
+- La fonction `Diversity()` de _entropart_ pour calculer un nombre de Hill ;
+
+- La fonction `CommunityProfile()` pour produire un profil en appliquant `Diversity()` à plusieurs ordres de diversité (par défaut, de 0 à 2 par pas de 0.1) ;
+
+- La fonction `CEnvelope()` pour ajouter un profil de diversité à un graphique existant ;
+
+- La fonction `Coverage()` pour calculer le taux de couverture d'un échantillon ;
+
+- La fonction `estimateD()` du package _iNext_.
+
+Exemple d'utilisation de `estimateD()` pour raréfier l'inventaire de Paracou au taux de couverture de 80% :
+
+```{r}
+library("iNEXT")
+# as.numeric supprime les noms du vecteur des abondances, sinon estimateD prend les espèces pour des parcelles
+estimateD(as.numeric(Paracou618.MC$Ns), base="coverage", level=0.8)
+```
+
+Il n'y a pas d'outil simple disponible pour raréfier la diversité aux ordres non entiers.
+
+
+## Consignes
+
+Ecrire l'article entièrement. 
+Chaque section sera réduite au strict minimum, dans l'objectif de ne pas dépasser deux ou trois pages.
+
+Utiliser les outils appris :
+
+- Bibliographie (réduite à moins de 15 références, dont 4 pour R et ses packages) partagée sous Mendeley dans un groupe ;
+
+- Rédaction en RMarkdown avec le modèle d'article EcoFoG ;
+
+- Projet R reproductible, contenant les données, le texte, la biblio. L'article devra pouvoir être produit en un clic sur le bouton _Knit_.
+
+- Projet sous contrôle de source avec git, publié sur _Github_.
+
+
+Appliquer les principes appris dans la partie théorique.

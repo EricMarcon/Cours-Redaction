@@ -1,0 +1,241 @@
+---
+title: "Bibliographie"
+author: "Eric Marcon"
+date: "9 janvier 2018"
+output:
+  ioslides_presentation:
+    logo: EcoFoG2017.png
+  beamer_presentation:
+    df_print: kable
+    includes:
+      in_header: EcoFoGBeamer.tex
+    keep_tex: yes
+    slide_level: 2
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Mendeley
+
+## Stocker
+
+Comment ajouter des références
+
+- Bouton Add
+
+- A la main
+
+- Par DOI
+
+- Importer de Mendeley
+
+- Web Importer
+
+
+## Ranger
+
+Mendeley permet d'organiser les références dans une structure arborescente
+
+- Arborescence
+
+    - Organisation thématique
+    
+    - Pas d'exclusivité
+    
+- Réservé
+
+    - All documents
+    
+    - Recently Added / Read
+    
+    - My publications
+
+    
+## Nettoyer
+
+Les données doivent être homogènes et sans erreur
+
+- Clé
+
+- Champs
+
+    - Nom des auteurs
+    
+    - Résumé et mots-clés
+
+
+## Lire
+
+Les documents peuvent être consultés et annotés
+
+- Dans Mendeley, hors de Mendeley
+
+- Notes, surlignage
+
+
+## Utiliser
+
+Mendeley gère automatiquement la bibliographie au cours de la rédaction
+
+- Extension Word
+
+- Fichier bib
+
+
+## Être mobile
+
+Les données sont stockées dans le cloud et peuvent être répliquées sur plusieurs appareils
+
+- Synchronisation
+
+- Mendeley pour Android
+
+- Accès web
+
+
+## Partager
+
+Les groupes permettent le partage de la bibliographie
+
+- Créer un groupe
+
+- Le partager
+
+
+## Limitations du plan gratuit
+
+Mendeley fournit un plan gratuit et des plans payants. Le plan gatuit limite les ressources disponibles.
+
+- 2 Go
+
+    - Ne pas tout synchroniser
+    
+    - Attention à la réinstallation
+    
+    - Utiliser un dossier fixe
+
+- Peu de groupes, peu de membres
+
+
+## Réseau social
+
+Mendeley est un gestionnaire de bibliographie et un réseau social
+
+- My Publications
+
+- Site Mendeley
+
+- Suggestions
+
+- Recherche de références
+
+
+## Autres outils
+
+Les outils concurrents:
+
+- EndNote
+
+    - Commercial, cher
+    
+    - Pas de bib
+
+- Zotero
+
+    - Libre
+    
+
+# Recherche biblio
+
+## Plan
+
+5 stratégies:
+
+- Bases de données - Mots-clés
+
+- De proche en proche
+
+- Suivre un auteur
+
+- Suivre une revue
+
+- Susciter des suggestions
+
+
+## Bases de données - Mots-clés
+
+Bases possibles :
+
+- [Google Scholar](https://scholar.google.com/)
+
+- Bases commerciales
+
+    - [Scopus](http://www.scopus.com/)
+
+    - [Web of Science](https://webofknowledge.com/)
+
+- [Mendeley](https://www.mendeley.com/research-papers/)
+
+
+## De proche en proche
+
+Partir d'un article récent, si possible d'une revue.
+
+
+## Suivre un auteur
+
+Chaque auteur développe son projet scientifique
+
+- Sur [Google Scholar](https://scholar.google.com/)
+
+- Sur [ResearchGate](https://www.researchgate.net/)
+
+
+## Suivre une revue
+
+Revues très généralistes pour la tendance
+
+- [Nature](https://www.nature.com/nature/)
+
+- [Science](http://www.sciencemag.org/)
+
+Revues spécialisées
+
+
+## Susciter des suggestions
+
+Stratégie passive mais efficace
+
+- Sur [Google Scholar](https://scholar.google.com/), d'après sa production propre
+
+- Sur [Mendeley](https://www.mendeley.com/suggest/), d'après sa base bibliographique
+
+
+## Synthèse
+
+- Combiner les différentes sources, trier
+
+- Ne pas se laisser déborder
+
+    - Traiter les alertes rapidement : lecture rapide, enregistrement éventuel sur Mendeley (All documents)
+    
+    - Séances de lecture régulières : classement dans une rubrique
+    
+- Discipline stricte : objectif d'un article par jour
+
+
+## Enjeux
+
+Obligation de connaître la littérature
+
+- Ne pas réinventer
+
+- Alimentation de sa réflexion
+
+Difficultés
+
+- Nombre d'articles
+
+- Possibilité de passer à côté d'un pan entier de la littérature
+
