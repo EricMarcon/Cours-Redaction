@@ -12,7 +12,7 @@ output:
     df_print: kable
     includes:
       in_header: EcoFoGBeamer.tex
-    keep_tex: yes
+    keep_tex: no
     slide_level: 2
     fig_caption: false
 ---

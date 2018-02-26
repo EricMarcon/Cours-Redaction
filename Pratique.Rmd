@@ -3,14 +3,14 @@ title: "Rédaction d'article : Pratique"
 author: "Eric Marcon"
 date: "10 janvier 2018"
 output:
-  ioslides_presentation:
-    logo: EcoFoG2017.png
   beamer_presentation:
     df_print: kable
     includes:
       in_header: EcoFoGBeamer.tex
-    keep_tex: yes
+    keep_tex: no
     slide_level: 2
+  ioslides_presentation:
+    logo: EcoFoG2017.png
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
