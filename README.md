@@ -2,7 +2,7 @@
 
 
 
-Ceci est le support des cours Rédaction d'articles et bibliographie du [master EFT](http://eft/ecofog/gf).
+Ceci est le support des cours Rédaction d'articles et bibliographie du [master EFT](http://eft.ecofog/gf).
 
 # Bibliographie
 
