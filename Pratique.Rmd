@@ -85,9 +85,7 @@ Tout automatiser :
 
     - Nécessite un apprentissage ;
     
-    - Bonne séparation du fond et de la forme ;
-    
-    - Automatisation complète possible avec knitR ;
+    - Bonne séparation du fond et de la forme ; Automatisation complète possible avec knitR ;
     
     - Collaboration en ligne avec Overleaf (mais l'automatisation est perdue).
 
@@ -95,9 +93,7 @@ Tout automatiser :
 
     - Très simple à apprendre ;
     
-    - Excellente séparation du fond et de la forme ;
-    
-    - Automatisation simple, idéal pour la reproductibilité ;
+    - Excellente séparation du fond et de la forme ; Automatisation simple, idéal pour la reproductibilité ;
     
     - Collaboration plus complexe, avec git.
     
@@ -124,13 +120,9 @@ Voir la [Documentation](http://rmarkdown.rstudio.com/lesson-1.html)
 
 Un projet R contient tout :
 
-- Modèle de document ;
+- Modèle de document ; Fichiers nécessaire à la mise en forme (styles de texte, de bibliographie, ...) ;
 
-- Fichiers nécessaire à la mise en forme (styles de texte, de bibliographie, ...) ;
-
-- Données ;
-
-- Code R pour produire les résultats, y compris les figures ;
+- Données ; Code R pour produire les résultats, y compris les figures ;
 
 - Figures additionnelles.
 
@@ -178,15 +170,12 @@ Les figures sont produites directement par le code :
 ## Rédaction
 
 Markdown est un langage très simple.
-Sa documentation est disponible sur le site de RStudio[^1].
-
-[^1]: <http://rmarkdown.rstudio.com/articles.html>
+Sa documentation est disponible sur le site de [RStudio](http://rmarkdown.rstudio.com/articles.html).
 
 
-Markdown est étendu par Bookdown [^2], qui permet la rédaction de livres et une syntaxe plus efficace pour les articles.
+Markdown est étendu par [Bookdown](https://bookdown.org/yihui/bookdown/), qui permet la rédaction de livres et une syntaxe plus efficace pour les articles.
+
 Ce document est réalisé avec Markdown dans RStudio: knitr traite le code Markdown, le passe à Pandoc pour sa transformaton en Latex, enfin MikteX le compile en PDF.
-
-[^2]: <https://bookdown.org/yihui/bookdown/>
 
 
 ## Bibliographie
