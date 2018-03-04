@@ -5,6 +5,7 @@
 \setbeamercolor{section in sidebar shaded}{fg=gray}
 \usefonttheme{professionalfonts}
 % Font size of code chunks : scriptsize
+\usepackage{fancyvrb}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\scriptsize}
 
 % Logo
@@ -13,7 +14,7 @@
 
 % 2-column layout, https://groups.google.com/forum/#!topic/pandoc-discuss/vcy7v9Uk95U
 \def\begincols{\begin{columns}}
-  \def\begincol{\begin{column}}
-    \def\endcol{\end{column}}
-  \def\endcols{\end{columns}}
+\def\begincol{\begin{column}}
+\def\endcol{\end{column}}
+\def\endcols{\end{columns}}
 

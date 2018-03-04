@@ -3,17 +3,26 @@ title: "Rédaction d'article : Pratique"
 author: "Eric Marcon"
 date: "10 janvier 2018"
 output:
+  ioslides_presentation:
+    logo: EcoFoG2017.png
   beamer_presentation:
-    df_print: kable
+    df_print: default
+    fig_caption: no
     includes:
       in_header: EcoFoGBeamer.tex
     keep_tex: no
     slide_level: 2
-  ioslides_presentation:
-    logo: EcoFoG2017.png
+  slidy_presentation: default
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE, tidy=TRUE, tidy.opts=list(blank=FALSE, width.cutoff=50))
+options(width=50)
+# Install necessary packages only
+InstallPackages <- function(Packages) {
+  sapply(Packages, function(Package) 
+    if (!Package %in% installed.packages()[, 1]) install.packages(Package))
+}
+# InstallPackages(c("devEMF"))
 ```
 
 
@@ -130,8 +139,6 @@ Un projet R contient tout :
 Ce n'est pas un package :
 
 - Un package a une organisation formelle inutile pour un article ;
-
-- Un package peut se justifier pour une thèse si les méthodes aboutissent à un package publié.
 
 
 ## Création du projet

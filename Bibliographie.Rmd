@@ -6,14 +6,23 @@ output:
   ioslides_presentation:
     logo: EcoFoG2017.png
   beamer_presentation:
-    df_print: kable
+    df_print: default
+    fig_caption: no
     includes:
       in_header: EcoFoGBeamer.tex
     keep_tex: no
     slide_level: 2
+  slidy_presentation: default
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE, tidy=TRUE, tidy.opts=list(blank=FALSE, width.cutoff=50))
+options(width=50)
+# Install necessary packages only
+InstallPackages <- function(Packages) {
+  sapply(Packages, function(Package) 
+    if (!Package %in% installed.packages()[, 1]) install.packages(Package))
+}
+# InstallPackages(c("devEMF"))
 ```
 
 # Mendeley
