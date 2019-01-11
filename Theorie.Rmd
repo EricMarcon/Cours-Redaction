@@ -211,7 +211,7 @@ La discussion fonctionne par paragraphes.
 
 - une phrase de conclusion :
 
-    - synthèse si la phrase thématique est une simple introduction ; implications sinon.
+    - synthèse si la phrase thématique est une simple introduction; implications sinon.
 
 Si le développement est trop long ou complexe, organiser la discussion en sous-sections dont les titres sont les phrases thématiques.
 
@@ -245,7 +245,7 @@ L'introduction pose la question scientifique.
 
 - Annonce de l'objectif : quelle est la contribution de l'article à la résolution du problème ?
 
-- Bref état de l'art : la discussion commplètera la revue de la littérature, se limiter aux références les plus importantes.
+- Bref état de l'art : la discussion complètera la revue de la littérature, se limiter aux références les plus importantes.
 
 - Énoncé de l'hypothèse de l'article : la question précise, à laquelle les résultats répondent directement.
 
@@ -326,7 +326,7 @@ Enjeu énorme : la majorité des lecteurs ne lira que le résumé.
 
 ## Liste des auteurs
 
-- Conditions pour être auteur;
+- Conditions pour être auteur ;
 
 - Premier et dernier auteur ; 
 

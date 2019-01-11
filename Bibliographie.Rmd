@@ -114,7 +114,7 @@ Les groupes permettent le partage de la bibliographie
 
 ## Limitations du plan gratuit
 
-Mendeley fournit un plan gratuit et des plans payants. Le plan gatuit limite les ressources disponibles.
+Mendeley fournit un plan gratuit et des plans payants. Le plan gratuit limite les ressources disponibles.
 
 - 2 Go
 
