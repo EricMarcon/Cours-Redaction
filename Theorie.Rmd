@@ -5,8 +5,6 @@ date: "9 janvier 2018"
 bibliography: ../../Publications/library.bib
 csl: methods-in-ecology-and-evolution.csl
 output:
-  ioslides_presentation:
-    logo: EcoFoG2017.png
   beamer_presentation:
     df_print: default
     fig_caption: no
@@ -14,6 +12,8 @@ output:
       in_header: EcoFoGBeamer.tex
     keep_tex: no
     slide_level: 2
+  ioslides_presentation:
+    logo: EcoFoG2017.png
   slidy_presentation: default
 ---
 ```{r setup, include=FALSE}
@@ -319,6 +319,31 @@ Enjeu énorme : la majorité des lecteurs ne lira que le résumé.
 - Les résultats principaux ;
 
 - Leur implication (la conclusion).
+
+
+
+# Matériel supplémentaire
+
+## Pourquoi
+
+Annexes à l'article :
+
+- Détails des méthodes, démonstrations mathématiques...
+
+- Figures secondaires mais intéressantes ;
+
+- Données ;
+
+- Multimedia.
+
+
+## Comment
+
+Le format dépend de la revue. En général, PDF.
+
+Pas d'édition : responsabilité totale des auteurs.
+
+Attention au référencement dans l'article, généralement très formel.
 
 
 
