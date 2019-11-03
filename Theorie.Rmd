@@ -239,17 +239,13 @@ L'introduction pose la question scientifique.
 
 ## Présentation
 
-- Quelques phrases de présentation du contexte.
+- Quelques phrases de présentation du contexte. Enjeux : quelles sont les questions larges sur le sujet ? Pas toujours utile si non traité dans la discussion.
 
-- Définition du problème : quelles sont les questions larges sur le sujet ?
-
-- Annonce de l'objectif : quelle est la contribution de l'article à la résolution du problème ?
-
-- Bref état de l'art : la discussion complètera la revue de la littérature, se limiter aux références les plus importantes.
+- Problématique : quelle est la contribution de l'article à ces questions ? Bref état de l'art : la discussion complètera la revue de la littérature, se limiter aux références les plus importantes.
 
 - Énoncé de l'hypothèse de l'article : la question précise, à laquelle les résultats répondent directement.
 
-- Si la conclusion est simple, la présenter ici brièvement.
+- Si la conclusion est simple, il est possible de la présenter ici brièvement.
 
 - Si le plan n'est pas IMRD, le présenter.
 
