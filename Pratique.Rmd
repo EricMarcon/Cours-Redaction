@@ -1,10 +1,10 @@
 ---
 title: "Rédaction d'article : Pratique"
 author: "Eric Marcon"
-date: "10 janvier 2018"
+date: "28 aout 2023"
 output:
   ioslides_presentation:
-    logo: EcoFoG2017.png
+    logo: images/logo.pdf
   beamer_presentation:
     df_print: default
     fig_caption: no
@@ -114,11 +114,7 @@ Tout automatiser :
 
 R, Rstudio et knitR.
 
-Package EcoFoG : modèles de présentation, d'article et d'ouvrage.
-
-```{r install, eval=FALSE}
-devtools::install_git("EcoFoG/EcoFoG")
-```
+Package memoiR : modèles de présentation, d'article et d'ouvrage.
 
 Utilisable pour une thèse...
 
@@ -143,9 +139,12 @@ Ce n'est pas un package :
 
 ## Création du projet
 
-Utiliser l'assistant _Nouveau Fichier /R Markdown... /A partir d'un modèle / Article EcoFoG_.
+Utiliser les assistants:
 
-Un nouveau dossier est créé. Le transformer en projet R: _Nouveau projet /A partir d'un dossier existant_.
+- File /New File /R Markdown... pour un simple fichier.
+
+- File /New Project /Document Project using memoiR... pour un projet.
+
 
 Tricoter pour vérifier le fonctionnement.
 
@@ -187,16 +186,11 @@ Ce document est réalisé avec Markdown dans RStudio: knitr traite le code Markd
 
 ## Bibliographie
 
-Utiliser sa bibliographie générale, produite par Mendeley :
+Utiliser sa bibliographie générale, produite par Zotero :
 
 - Pas de perte de temps pendant la rédaction ;
 
-- Produire une bibliographie autonome à la fin avec Jabref (_Tools /New Sublibrary based on AUX file_).
-
-
-Ou utiliser directement une bibliographie spécifique, dans un fichier bib autonome.
-
-Voir la [Documentation](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html).
+- Très facile avec le mode visuel de RStudio (Insert/Citation).
 
 
 ## Versionnement
@@ -207,7 +201,6 @@ Utiliser _git_, le système majoritaire actuellement.
 
 - RStudio gère directement _git_ ;
 
-- Compléter éventuellement par un gestionnaire de bureau pour les autres projets (par exemple, _Tortoise git_).
 
 Passer le projet sous contrôle de version : _Tools /Version Control /Project Setup..._, sélectionner _Git_.
 
@@ -225,11 +218,11 @@ Chaque séance de travail se termine par une livraison : _Commit_.
 
 ## Collaboration
 
-Utiliser Github pour un projet public, BitBucket pour un projet privé :
+Utiliser Github  :
 
-- Ouvrir un compte sur chaque plate-forme ;
+- Ouvrir un compte sur la plate-forme ;
 
-- Créer un dépôt pour le projet sur la  plate-forme appropriée ;
+- Créer un dépôt pour le projet ;
 
 - Donner les droits d'écrire sur le dépôt aux collaborateurs (qui doivent avoir un compte sur la même plate-forme) ;
 
@@ -250,7 +243,7 @@ git remote add origin
 git push -u origin master
 ```
 
-Après chaque livraison, pousser les modifications sur GitHub ou BitBucket.
+Après chaque livraison, pousser les modifications sur GitHub.
 
 Avant chaque séance de travail, tirer les modification des collaborateurs.
 
